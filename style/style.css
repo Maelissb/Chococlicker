@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "ff";
+  src: url("/asset/typo/finalf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "ff", sans-serif;
+  background-image: url("/asset/back.jpg");
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#header h1 {
+  flex-grow: 1;
+  text-align: center;
+  font-family: "ff", sans-serif;
+}
+#header img {
+  width: 50px;
+  cursor: pointer;
+  padding-right: 50px;
+}
+
+#game-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  margin-top: 2rem;
+}
+#menu button {
+  background-color: #ac1515;
+  width: 10rem;
+}
+
+#score {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#chocobo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 40%;
+}
+#chocobo button {
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+#chocobo img {
+  width: 40%;
+  transition: transform 0.1s ease-in-out;
+}
+#chocobo button:active img {
+  transform: scale(0.9);
+}
+
+.zoom {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-out;
+}
+
+#shop {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 20rem;
+  height: 35rem;
+  margin-top: 2rem;
+  background-color: #a06534;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+#shop h2 {
+  text-align: center;
+}
+
+.gysal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15rem;
+  height: 5rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 10px 35px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.gysal:hover {
+  transform: scale(1.05);
+}
+.gysal .container {
+  display: flex;
+  margin: 2rem;
+}
+.gysal .container .number {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  font-size: 20px;
+  color: #3a3a3a;
+  width: 50px;
+  padding-top: 0.5rem;
+}
+.gysal h2, .gysal p {
+  color: inherit;
+}
+.gysal img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left center;
+     object-position: left center;
+  transition: transform 0.2s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

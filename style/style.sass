@@ -1,0 +1,150 @@
+// Variables
+$font-size: 24px
+
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+//font
+@font-face
+  font-family: 'ff'
+  src: url('/asset/typo/finalf.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+  
+// Styles globaux
+body
+  font-family: "Poppins", serif
+  background-image: url("/asset/back.jpg")
+
+#header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 20px
+  h1
+    flex-grow: 1
+    text-align: center
+    // font-family: 'ff', sans-serif
+
+  img
+    width: 50px
+    cursor: pointer
+    padding-right: 50px
+
+
+// Conteneur principal pour la mise en page
+#game-container
+  display: flex
+  justify-content: space-between  
+  align-items: flex-start        
+  height: 100vh
+  padding: 0 2rem               
+
+// Menu 
+#menu
+  display: flex
+  flex-direction: column          
+  align-items: flex-start        
+  width: auto                      
+  margin-top: 2rem  
+
+  button
+    background-color: #ac1515 
+    width: 10rem            
+
+#score
+  font-size: $font-size
+  margin-bottom: 10px
+
+button
+   background: none
+   border: none
+   padding: 0
+   cursor: pointer
+   box-shadow: none
+   -webkit-appearance: none // retire le style par défaut sur certains navigateurs
+   -moz-appearance: none // retire le style par défaut pour Firefox
+   appearance: none // retire le style par défaut pour tous les navigateurs
+  
+
+
+// Chocobo 
+#chocobo
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-grow: 1
+  width: 40%
+ 
+
+  button
+    display: inline-block
+    padding: 0
+    cursor: pointer
+    border: none
+
+  img
+    width: 40%
+    transition: transform 0.1s ease-in-out // Animation lors du clic (zoom)
+
+  button:active img
+    transform: scale(0.9) // Effet de réduction à 90% au clic
+
+.zoom
+  transform: scale(0.9) // Réduit l'image à 90% de sa taille
+  transition: transform 0.3s ease-out // Animation du zoom
+
+// Shop 
+#shop
+  display: flex
+  flex-direction: column  
+  text-align: right               
+  width: 20rem   
+  height: 35rem                  
+  margin-top: 2rem    
+  background-color: #a06534
+  border: 2px solid #ffffff 
+  border-radius: 10px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  color: #fff
+  h2
+    text-align: center
+
+.gysal
+  display: flex
+  justify-content: flex-start // Aligner le contenu à gauche
+  align-items: center
+  width: 15rem
+  height: 5rem
+  background-color: #ffffff
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  border-radius: 10px
+  margin: 10px 35px
+  text-align: center
+  transition: transform 0.2s ease-in-out
+  cursor: pointer // Changer le curseur pour pointer
+  
+  &:hover
+    transform: scale(1.05) // Ajouter un effet de zoom au survol
+
+  .container
+    display: flex
+    margin: 2rem
+    .number
+       display: flex
+       justify-content: flex-end
+       text-align: center
+       font-size: 20px
+       color: #3a3a3a
+       width: 50px
+       padding-top: 0.5rem
+
+  h2, p
+    color: inherit // Garder la couleur héritée de .gysal
+  
+  img
+    // width: 100% // L'image occupe 100% de la largeur du bouton
+    height: 100% // L'image prend 100% de la hauteur du bouton
+    object-fit: contain // L'image conserve son aspect ratio sans être coupée
+    object-position: left center // Aligner l'image à gauche
+    transition: transform 0.2s ease-in-out

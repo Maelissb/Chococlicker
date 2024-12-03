@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Clicker</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>ChocoboClicker</h1>
+       <!-- Images qui déclencheront le son lors du clic -->
+        <img src="/asset/off.png" alt="Off" id="toggleImage">
+        <!-- Élément audio pour le son -->
+        <audio id="clickSound" src="/asset/audio/FF7 chocobo Theme.mp3"></audio>
+    </div> 
+       
+    <section id="game-container">
+        <div id="menu">
+            <div id="score">gils: 0</div> 
+        </div>  
+
+        <!-- Bouton autour de l'image Chocobo pour la rendre cliquable -->
+        <div id="chocobo">
+            <button id="chocoboButton">
+                <img id="chocoboImage" src="/asset/chococobo.png" alt="Chocobo">
+            </button>
+        </div>
+
+        <div id="shop">
+            <h2>Shop</h2>
+            <button id="gysalButton" class="gysal">
+                <img src="/asset/Gysahl_Greens.png" alt="">
+                <div class="container">
+                    <div class="text">
+                        <h2>Gysahl</h2>
+                        <p id="gysahlPrice">10 g</p>
+                    </div>
+                    <div class="number">
+                        <p id="gysalCount">0</p>
+                    </div>
+                </div>
+            </button>
+            <button class="gysal">
+                <img src="/asset/Gysahl_Greens.png" alt="">
+                <div class="container">
+                    <div class="text">
+                        <h2>Oignon</h2>
+                        <p>price: 20 g</p>
+                    </div>
+                    <div class="number">
+                        <p>0</p>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
